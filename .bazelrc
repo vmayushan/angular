@@ -99,8 +99,6 @@ build:remote --remote_timeout=600
 # Since we run remotely, we can increase this number significantly.
 common:remote --jobs=200
 
-build:remote --google_default_credentials
-
 # Force remote exeuctions to consider the entire run as linux
 build:remote --cpu=k8
 build:remote --host_cpu=k8
@@ -123,10 +121,8 @@ build:remote --remote_grpc_log=/tmp/rbe-grpc.log
 build:remote --experimental_remote_execution_keepalive
 
 # Use HTTP remote cache
-build:remote-cache --remote_cache=https://storage.googleapis.com/angular-team-cache
 build:remote-cache --remote_accept_cached=true
 build:remote-cache --remote_upload_local_results=false
-build:remote-cache --google_default_credentials
 
 # Additional flags added when running a "trusted build" with additional access
 build:trusted-build --remote_upload_local_results=true
