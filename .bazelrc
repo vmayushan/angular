@@ -109,10 +109,6 @@ build:remote --host_platform=@npm//@angular/build-tooling/bazel/remote-execution
 build:remote --platforms=@npm//@angular/build-tooling/bazel/remote-execution:platform
 
 # Remote instance and caching
-build:remote --remote_instance_name=projects/internal-200822/instances/primary_instance
-build:remote --bes_instance_name=internal-200822
-build:remote --remote_cache=remotebuildexecution.googleapis.com
-build:remote --remote_executor=remotebuildexecution.googleapis.com
 build:remote --remote_upload_local_results=false
 
 build:remote --remote_grpc_log=/tmp/rbe-grpc.log
